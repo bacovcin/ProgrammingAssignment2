@@ -25,7 +25,7 @@ cacheSolve <- function(x, ...) {
     message("Getting cached data...")
     return(inv.x)
   }
-  mat <- x$get
+  mat <- x$get()
   inv.x <- solve(mat)
   x$setinv(inv.x)
   inv.x 
